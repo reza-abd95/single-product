@@ -1,5 +1,5 @@
-"use client"; // لازم برای استفاده از هوک‌ها در سمت کلاینت
-import { useState, useEffect, useRef } from "react"; // وارد کردن هوک‌ها
+"use client";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
   CiSearch,
@@ -123,7 +123,10 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="flex justify-between lg:hidden px-4 py-4  mx-auto">
+        <div
+          ref={headerRef}
+          className="flex justify-between lg:hidden px-4 py-4  mx-auto"
+        >
           <div className="flex items-center justify-center gap-1">
             <IoIosArrowForward className="w-5" />
             <Image
