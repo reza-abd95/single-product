@@ -64,7 +64,7 @@ export default function page() {
 
   return (
     <div className="w-full">
-      <div className="max-w-[1900px] px-4 md:px-40 py-3 mx-auto">
+      <div className="max-w-[1900px] px-4 lg:px-40 py-3 mx-auto">
         <nav>
           <ol className="flex items-center gap-3 text-xs text-gray-600">
             <li className="flex items-center">خانه</li>
@@ -77,13 +77,13 @@ export default function page() {
           </ol>
         </nav>
       </div>
-      <div className="max-w-[1900px] px-4 md:px-40 py-3 mx-auto flex ">
-        <div className="w-full  md:w-3/4 h-[1400px] flex flex-col md:flex-row">
-          <div className="w-full md:w-5/12 max-h-96  bg-white p-4 flex flex-col justify-between rounded-lg ">
-            <div className="flex justify-end md:justify-between items-center gap-2">
-              <CiShare2 className="w-6 h-6 md:w-4 md:h-4 text-gray-600 cursor-pointer" />
-              <CiBellOn className="w-6 h-6 md:w-4 md:h-4 text-gray-600 cursor-pointer" />
-              <CiHeart className="w-6 h-6 md:w-4 md:h-4 text-red-500 cursor-pointer" />
+      <div className="max-w-[1900px] px-4 lg:px-40 py-3 mx-auto flex ">
+        <div className="w-full  lg:w-3/4 h-[1400px] flex flex-col lg:flex-row">
+          <div className="w-full lg:w-5/12 max-h-96  bg-white p-4 flex flex-col justify-between rounded-lg ">
+            <div className="flex justify-end lg:justify-between items-center gap-2">
+              <CiShare2 className="w-6 h-6 lg:w-4 lg:h-4 text-gray-600 cursor-pointer" />
+              <CiBellOn className="w-6 h-6 lg:w-4 lg:h-4 text-gray-600 cursor-pointer" />
+              <CiHeart className="w-6 h-6 lg:w-4 lg:h-4 text-red-500 cursor-pointer" />
             </div>
 
             <div className="my-3 flex-grow flex items-center justify-center">
@@ -96,7 +96,7 @@ export default function page() {
               />
             </div>
 
-            <div className="hidden md:flex justify-between items-center space-x-2 rtl:space-x-reverse">
+            <div className="hidden lg:flex justify-between items-center space-x-2 rtl:space-x-reverse">
               <div className="w-[70px] h-[70px] border border-gray-300 rounded-md p-1 cursor-pointer flex items-center justify-center ">
                 <BsThreeDots className="w-8 h-8 text-gray-600" />
               </div>
@@ -130,7 +130,7 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-7/12 flex flex-col gap-6 p-4">
+          <div className="w-full lg:w-7/12 flex flex-col gap-6 p-4">
             <div>
               <h1 className="text-2xl font-semibold text-gray-800 leading-10">
                 گوشی موبایل اپل مدل iPhone 16 Not Active ظرفیت ۱۲۸ گیگابایت - رم
@@ -249,7 +249,7 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className=" w-1/4 hidden  bg-[#F8F9FA] border border-[#CED4DA] p-4 rounded-lg shadow-md md:flex flex-col gap-y-5 text-xs sticky top-48 self-start">
+        <div className=" w-1/4 hidden  bg-[#F8F9FA] border border-[#CED4DA] p-4 rounded-lg shadow-md lg:flex flex-col gap-y-5 text-xs sticky top-44 self-start">
           <div className="flex text-[10px] items-center p-3 bg-white rounded-lg">
             <Image
               src="/images/mini-logo.png"

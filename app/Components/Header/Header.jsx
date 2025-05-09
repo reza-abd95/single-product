@@ -14,6 +14,7 @@ import { RiStackFill } from "react-icons/ri";
 import { PiBookOpenTextFill } from "react-icons/pi";
 import { BsBookmarkDashFill } from "react-icons/bs";
 import { FaStore } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Header() {
   const [isFixed, setIsFixed] = useState(false);
@@ -65,19 +66,19 @@ export default function Header() {
             ? "fixed top-0 left-0 right-0 z-50 shadow-lg transition-all duration-300 ease-in-out"
             : "relative lg:border-b lg:border-gray-200 lg:shadow-xl/5"
         }`}
+        ref={headerRef}
       >
-        <div
-          ref={headerRef}
-          className="max-w-[1900px] px-40 py-3 mx-auto justify-between items-center hidden lg:flex flex-col "
-        >
+        <div className="max-w-[1900px] px-40 py-3 mx-auto justify-between items-center hidden lg:flex flex-col ">
           <div className=" w-full flex justify-between items-center">
             <div>
-              <Image
-                src="/images/logo.png"
-                alt="لوگوی شرکت"
-                width={120}
-                height={40}
-              />{" "}
+              <Link href="/">
+                <Image
+                  src="/images/logo.png"
+                  alt="لوگوی شرکت"
+                  width={120}
+                  height={40}
+                />{" "}
+              </Link>
             </div>
             <div className="w-[574px] h-[48px] border border-[#CED4DA] rounded-xl p-4 flex items-center justify-end focus-within:border-orange-500 transition-colors duration-200 mx-4">
               <input
@@ -123,10 +124,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div
-          ref={headerRef}
-          className="flex justify-between lg:hidden px-4 py-4  mx-auto"
-        >
+        <div className="flex justify-between lg:hidden px-4 py-4  mx-auto">
           <div className="flex items-center justify-center gap-1">
             <IoIosArrowForward className="w-5" />
             <Image
