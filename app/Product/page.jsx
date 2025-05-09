@@ -78,7 +78,7 @@ export default function page() {
       </div>
       <div className="max-w-[1900px] px-40 py-3 mx-auto flex ">
         <div className="w-3/4  flex">
-          <div className="w-5/12 h-full bg-white p-4 flex flex-col justify-between rounded-lg ">
+          <div className="w-5/12  bg-white p-4 flex flex-col justify-between rounded-lg ">
             <div className="flex justify-between items-center">
               <CiShare2 className="w-4 h-4 text-gray-600 cursor-pointer" />
               <CiBellOn className="w-4 h-4 text-gray-600 cursor-pointer" />
@@ -139,6 +139,7 @@ export default function page() {
                 iPhone 16 Not Active 128/6
               </p>
             </div>
+
             <div className="flex justify-between items-center mt-2">
               <div className="flex items-center gap-6 text-xs text-gray-500">
                 <span>
