@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
-import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"; // IoIosArrowForward اضافه شد
 import Image from "next/image";
 import { CiHeart, CiBellOn, CiShare2, CiCircleCheck } from "react-icons/ci";
 import { BsPatchCheckFill, BsThreeDots } from "react-icons/bs";
-import { FaCheck, FaStar } from "react-icons/fa6";
+import { FaCheck, FaStar, FaStoreAlt, FaBoxOpen } from "react-icons/fa"; // FaStoreAlt و FaBoxOpen اضافه شدند
+import { FiRefreshCw } from "react-icons/fi"; // FiRefreshCw اضافه شد
 
 const productColors = [
   {
@@ -63,7 +64,7 @@ export default function page() {
 
   return (
     <div className="w-full">
-      <div className="max-w-[1900px] px-40 py-3 mx-auto">
+      <div className="max-w-[1900px]  px-40 py-3 mx-auto">
         <nav>
           <ol className="flex items-center gap-3 text-xs text-gray-600">
             <li className="flex items-center">خانه</li>
@@ -77,8 +78,8 @@ export default function page() {
         </nav>
       </div>
       <div className="max-w-[1900px] px-40 py-3 mx-auto flex ">
-        <div className="w-3/4  flex">
-          <div className="w-5/12  bg-white p-4 flex flex-col justify-between rounded-lg ">
+        <div className="w-3/4 h-[1400px] flex">
+          <div className="w-5/12 max-h-96  bg-white p-4 flex flex-col justify-between rounded-lg ">
             <div className="flex justify-between items-center">
               <CiShare2 className="w-4 h-4 text-gray-600 cursor-pointer" />
               <CiBellOn className="w-4 h-4 text-gray-600 cursor-pointer" />
@@ -248,7 +249,120 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="w-1/4 "></div>
+        <div className="w-1/4 bg-[#F8F9FA] border border-[#CED4DA] p-4 rounded-lg shadow-md flex flex-col gap-y-5 text-xs sticky top-48 self-start">
+          <div className="flex text-[10px] items-center p-3 bg-white rounded-lg">
+            <Image
+              src="/images/mini-logo.png"
+              alt="Zitro Logo"
+              width={12}
+              height={12}
+            />{" "}
+            <span className="text-gray-700 mx-2">
+              فروشنده:{" "}
+              <span className="font-semibold text-orange-500">زیترو</span>
+            </span>
+            {/* فرض بر اینکه لوگوی زیترو موجود است */}
+          </div>
+          <div className="border text-[10px] border-blue-300 bg-blue-50 p-3 rounded-lg text-blue-700 flex items-center gap-2">
+            <FiRefreshCw className="w-4 h-4" />
+            <span>
+              جهت ثبت درخواست ثبت رجیستری با شماره{" "}
+              <a href="tel:02172509" className="font-semibold hover:underline">
+                ۰۲۱۷۲۵۰۹
+              </a>{" "}
+              تماس بگیرید.
+            </span>
+          </div>
+          <div className="space-y-3 text-[10px] text-gray-600 bg-white rounded-lg">
+            <div className="flex justify-start items-center gap-2  p-3">
+              <FaStoreAlt className="w-5 h-5 text-gray-500 " />
+              <span>تامین حرفه ای کالای دیجیتال</span>
+            </div>
+            <div className="flex justify-start  items-center gap-2  p-3">
+              <FaBoxOpen className="w-5 h-5 text-gray-500" />
+              <span>بسته بندی و ارسال کالا</span>
+            </div>
+          </div>
+          <div className="flex  justify-between items-start text-[10px] p-3  rounded-lg">
+            <div className="bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">
+              ٪۱۰
+            </div>
+            <div className="text-left ">
+              <p className="text-red-400 line-through text-sm">
+                ۷۱,۰۰۰,۰۰۰ <span className="text-[10px]">تومان</span>
+              </p>
+              <p className="text-2xl font-bold text-gray-800">
+                ۶۳,۰۰۰,۰۰۰ <span className="text-xs font-normal">تومان</span>
+              </p>
+            </div>
+          </div>
+          <div className="border border-gray-200 bg-gray-50 rounded-lg p-3 flex flex-col gap-2">
+            <div className="flex  items-center">
+              <Image
+                src="/images/SamanInsurance.png"
+                alt="Saman Insurance"
+                width={20}
+                height={20}
+                className="object-contain mx-2"
+              />
+              <span className="font-semibold text-gray-700">
+                بیمه تجهیزات دیجیتال - بیمه سامان
+              </span>
+            </div>
+            <div className="flex justify-end items-center">
+              <div className="bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">
+                ٪۱۰
+              </div>
+              <div className="text-left  ">
+                <span className="text-gray-800 font-semibold ml-1 rtl:ml-0 rtl:mr-1">
+                  ۹۰۰,۰۰۰
+                </span>
+                <span className="text-red-500 line-through text-xs mx-1">
+                  ۱,۰۰۰,۰۰۰
+                </span>
+                <span className="text-[10px] text-gray-600 mx-1">تومان</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-3 pt-2">
+            <button className="bg-green-500 hover:bg-green-600 text-white w-full py-3 rounded-lg font-semibold text-sm transition-colors">
+              خرید نقدی
+            </button>
+            <button className="bg-blue-500 hover:bg-blue-600 text-white w-full py-3 rounded-lg font-semibold text-sm transition-colors">
+              خرید اقساطی
+            </button>
+          </div>
+          <div className="flex justify-around items-center pt-3">
+            <Image
+              src="/images/jetvam.png"
+              alt="JetVam"
+              width={58}
+              height={58}
+              className="object-contain "
+            />
+            <Image
+              src="/images/digipay.png"
+              alt="DigiPay"
+              width={58}
+              height={58}
+              className="object-contain "
+            />
+            <Image
+              src="/images/moneysa.png"
+              alt="Manisa"
+              width={58}
+              height={58}
+              className="object-contain "
+            />
+            <Image
+              src="/images/blu.png"
+              alt="Blu"
+              width={58}
+              height={58}
+              className="object-contain "
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
